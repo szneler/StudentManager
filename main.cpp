@@ -2,6 +2,9 @@
 #include <string>
 #include <sstream>
 
+// TO DO: add class student
+// TO DO: add class to manage students (class to contain all methods mentioned below)
+
 using namespace std;
 
 int main()
@@ -19,6 +22,7 @@ int main()
 		cout << "3. Delete Student" << endl;
 		cout << "4. Exit" << endl;
 		fflush(stdin);
+        //TO DO: add method to print list of students
 		cout << endl << "Select option: ";
 		getline(cin, choosenOption);
 		system("clear");
@@ -28,15 +32,15 @@ int main()
 		switch (option)
 		{
 		case '1':
-		//	TO DO: add function to create new student record
+		//	TO DO: add method  to create new student record
 			break;
 
 		case '2':
-		//	TO DO: add function to sort students list by ID
+		//	TO DO: add method  to sort students list by ID
 			break;
 
 		case '3':
-	    // TO DO: add function to erase record
+	    // TO DO: add method to erase record
 			break;
 	
         case '4':
