@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "Student.h"
 
-// TO DO: add class student
 // TO DO: add class to manage students (class to contain all methods mentioned below)
 
 using namespace std;
