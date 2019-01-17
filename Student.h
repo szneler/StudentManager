@@ -1,3 +1,7 @@
+ #ifndef __STUDENT_H_INCLUDED
+ #define __STUDENT_H_INCLUDED
+
+
 #include <iostream>
 #include <string>
 
@@ -11,7 +15,15 @@ public:
 
 	~Student();
 
+	unsigned int getStudentTranscriptID() const;
+
+	string getStudentFirstName() const;
+
+	string getStudentSurname() const;
+
 private:
 	unsigned int newStudentTranscriptID;
 	string newStudentFirstName, newStudentSurname;
 };
+
+#endif

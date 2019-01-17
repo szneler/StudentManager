@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include "Student.h"
+#include "StudentManager.h"
 
 // TO DO: add class to manage students (class to contain all methods mentioned below)
 
@@ -9,6 +10,9 @@ using namespace std;
 
 int main()
 {
+    auto& managerS = StudentManager::getInstance();
+//	managerS.Students();
+
 	string choosenOption;
 	char option;
 	
@@ -22,7 +26,7 @@ int main()
 		cout << "3. Delete Student" << endl;
 		cout << "4. Exit" << endl;
 		fflush(stdin);
-        //TO DO: add method to print list of students
+        //TO DO: add method to print list of students - method should print list below MAIN MENU
 		cout << endl << "Select option: ";
 		getline(cin, choosenOption);
 		system("clear");
@@ -32,7 +36,7 @@ int main()
 		switch (option)
 		{
 		case '1':
-		//	TO DO: add method  to create new student record
+            managerS.addStudentToVector();
 			break;
 
 		case '2':

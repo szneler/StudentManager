@@ -14,3 +14,15 @@ Student::Student(unsigned int studentTranscriptID, string studentFirstName, stri
 
 Student::~Student() {
 }
+
+unsigned int Student::getStudentTranscriptID() const {
+	return newStudentTranscriptID;
+}
+
+string Student::getStudentFirstName() const {
+	return newStudentFirstName;
+}
+
+string Student::getStudentSurname() const {
+	return newStudentSurname;
+}
