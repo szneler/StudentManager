@@ -31,3 +31,51 @@ void StudentManager::addStudentToVector()
 	cin.ignore();
     getchar();
 }
+
+	void StudentManager::printStudentsList()
+	{   cout << "STUDENT LIST:"<<endl;
+	    if (students.size() == 0)
+        {
+            cout<<"--No retults--"<<endl;
+
+        }
+        else
+        {   
+            for (size_t i = 0; i < students.size(); i++)
+	    	{
+				    cout << "First name: " << students[i].getStudentFirstName();
+			    	cout << ",Surname: " << students[i].getStudentSurname();
+		    		cout << ", TranscriptID: " << students[i].getStudentTranscriptID() << endl;
+	    	}
+        }
+	}
+
+void StudentManager::eraseStudentRecordByID()
+{
+    unsigned int resultToErase {0};
+    cout<< "Enter TranscriptID of student record to erease: ";
+    cin>> resultToErase;
+
+     for (size_t i = 0; i < students.size(); i++)
+          {
+             if(students[i].getStudentTranscriptID()==resultToErase)
+                 {
+                    students.erase(students.begin()+i);
+                    cout << "Record erased. Press enter to continue.";
+                    cin.ignore();
+                    getchar();
+                    break;
+                 } 
+         }
+}
+
+void StudentManager::sortStudentListByID()
+{
+    sort(students.begin(), students.end(),
+            [](const Student& x, const Student& y)
+            {
+				return x.getStudentTranscriptID() < y.getStudentTranscriptID();
+			});
+}
+
+

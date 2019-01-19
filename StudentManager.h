@@ -7,6 +7,7 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include "Student.h"
 
 using namespace std;
@@ -25,6 +26,8 @@ public:
 	void addStudentToVector();
 	void sortStudentListByID();
     void printStudentsList();
+    void eraseStudentRecordByID();
+
 };
 
 #endif
